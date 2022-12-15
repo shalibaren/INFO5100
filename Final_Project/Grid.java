@@ -225,15 +225,15 @@ public class Grid extends JPanel{
     }
  
     // function used for drawing
-    private static int offsetCoors(int arg) {
+    private static int offsetColors(int arg) {
         return arg * (MARGIN + SIDE) + MARGIN;
     }
     
     // draws the tile
     private void drawTile(Graphics g, Tile tile, int x, int y) {
         ColorSetting val = tile.value();
-        int xOffset = offsetCoors(x);
-        int yOffset = offsetCoors(y);
+        int xOffset = offsetColors(x);
+        int yOffset = offsetColors(y);
         g.setColor(val.color());
         g.fillRect(xOffset, yOffset, SIDE, SIDE);
         g.setColor(val.fontColor());
